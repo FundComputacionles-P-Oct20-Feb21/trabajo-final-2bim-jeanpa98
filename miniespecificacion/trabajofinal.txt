@@ -70,58 +70,57 @@
 
 1. Inicio
 2. funcion principal()
-3.     opcion1, i[0-n]
-4.     opcion2, x(10)[{a-z}, {A-Z}]
+4.     num, i[0,n]
 5.     contadorCuentas, i[0-n] <-- 1
 6.     bandera <-- true
-7.     bandera2 <-- true
-8.     num, i[0, n]
-9.          Escribir "Ingresar 1 para crear una cuenta en Facebook"
-10.		Si num == 1 entonces
-11.			crearFacebook()
-12.				De lo contario
-13.         Escribir "Ingresar 2 para crear unacuenta en Whatsapp"
-14.		Si num == 2 entonces
-15.			crearWhatsapp()
-16.				De lo contario
-17.         Escribir "Ingresar 3 para crear una cuenta en Telegram"
-18.		Si num == 3 entonces
-19.			crearTelegram()
-20.				De lo contario
-19.         Escribir "Ingresar 4 para crear una cuenta en Signal"
-20.		Si num == 4 entonces
-21.			crearSignal()
-22				De lo contario
-22.         Escribir "Ingresar 5 para crear una cuenta en Instagram"
-23.		Si num == 5 entonces
-24.			crearInstagram()
-25				De lo contario
-26.         Escribir "Ingresar 6 para crear una cuenta en Flickr: "
-27.         	 Si num == 6 entonces
-28.			crearFlickr()
-29.				De lo contario
-30.             Escribir "Escriba SI para crear mas cuentas"
-31.			Leer opcion1
-32.             Escribir "Escriba NO para ya no crear mas cuentas: "
-33.             Leer opcion2
-34.             Si (opcion2 == "No") Entonces
-35.                 bandera <-- false
-36.                 bandera2 <-- true
-37.                 Escribir obtenerMensaje(contador)
-38.             De lo contrario
-39.                 Si (opcion1 == "SI") Entonces
-40.                     bandera2 <-- false
-41.               	contadorCuentas <-- contadorCuentas + 1
-42.                 De lo contrario
-43.                     Escribir "Opción incorrecta."
-44.									Fin Si
-45.                           			  		Fin Si
-46.                        		 		Fin Si
-47.                   				Fin Si
-48.                 			Fin Si
-49.             		Fin Si   		
-50.  	Fin Si (bandera2)
-51.  Fin Si(bandera)
+8.     salida,  x(10)[{a-z}, {A-Z}]
+9.     Mientras (bandera == true) entonces
+8.		Escribir "Ingrese 1 para crear una cuenta de Facebook"
+			+ "Ingrese 2 para crear una cuenta en Twitter"
+			+ "Ingrese 3 para crear una cuenta en Whatsapp"
+			+ "Ingrese 4 para crear una cuenta en Telegram"
+			+ "Ingrese 5 para crear una cuenta en Signal"
+			+ "Ingrese 6 para crear una cuenta en Instagram"
+			+ "Ingrese 7 para crear una cuenta en Flickr"
+9.		Leer num
+10.			Si (num == 1) entonces
+11.				crearFacebook()
+12.					De lo contario
+13.			Si (num == 2) entonces
+14.				crearTwitter()
+15.					De lo contrario
+16.			Si (num == 3) entonces
+17.				crearWhatsapp()
+18.					De lo contrario
+19.			Si (num == 4) entonces
+20.				crearTelegram()
+21.					De lo contrario
+22.			Si (num == 5) entonces
+23.				crearSignal()
+24.					De lo contrario
+25.			Si (num == 6) entonces
+26.				crearInstagram()
+27.					De lo contrario
+28.			Si (num == 7) entonces
+29.				crearFlickr()
+30.					De lo contario
+31.			Escribir "La opcion es incorrecta"
+32.			Fin si (num1)
+33.			Fin si (num2)
+34.			Fin si (num3)
+35.			Fin si (num4)
+36.			Fin si (num5)
+37.			Fin si (num6)
+38.			Fin si (num7)
+39.		contador <-- contador + 1
+40.		Escribir "Escriba "Si" para dejar de crear cuentas"
+41.		Leer salida
+42.		Si (salida == "si") entonces
+43.			bandera <-- false
+44		Fin si (salida)
+45.	fin_Mientras
+46.	obtenerMensaje(contadorCuentas)
+47. 	fin funcion principal
 52. fin funcion principal
 
 //funcion para crear Facebook
